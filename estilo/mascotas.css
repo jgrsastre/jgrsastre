@@ -1,0 +1,875 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: url("../rs/loginb.png") #F4F4F4;
+    overflow-x: hidden;
+}
+
+#cabecera {
+    box-shadow: inset 0px 0px 100px 5px white;
+}
+
+
+@media (min-width: 1024px) { 
+    .contenedor-principal {
+        width: 100%;
+        height: 100vh;
+    
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #cabecera{
+        width: 100%;
+        height: 4vw;
+    
+        display: flex;
+    }
+    
+    #cabecera .cabecera-c{
+        width: 100%;    
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    
+    #cabecera .cabecera-c .marca{
+        width: 20%;
+        color: #BFC400;
+    
+        display: flex;
+        align-items: center;
+    
+    }
+    
+    #cabecera .cabecera-c .marca .logo{
+        width: 20%;
+        height: 100%;
+        background: url("../rs/logo.png"),white;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+        color: #BFC400;
+    }
+    
+    #cabecera .cabecera-c .marca .titulo{
+        flex: 1;
+    
+        padding: 0% 2%;
+        font: normal 1vw Monserrat;
+    
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    
+    #cabecera .cabecera-c .menu{
+        flex: 1;
+    
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    #cabecera .cabecera-c .menu a{
+    
+        padding: .2vw;
+        text-decoration: none;
+        font: normal 1.2vw verdana;
+        border: 1px solid #3D2861;
+        border-radius: .5vw;
+        margin: 0% 1%;
+    
+        display: block;
+    
+    }
+    #cabecera .cabecera-c .menu a:hover{
+        background: #3D2861;
+        color: #FFFFFF;
+    
+    }
+    
+    #contenido {
+        flex: 1;
+        width: 100%;
+        padding: 1%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #contenido .titulo {
+        width: 100%;
+        margin-left: 2%;
+        color: #BFC400;
+        font: normal 2vw Arial, sans-serif;
+    
+    }
+    
+    
+    #contenido .contenedor-mascotas {
+        margin-top: 2%;
+        width: 80%;
+    
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    
+    #contenido .contenedor-mascotas .encabezado-seccion {
+        width: 100%;
+        height: 5vw;
+    
+        display: flex;
+    }
+    
+    #contenido .contenedor-mascotas .encabezado-seccion .imagen-marca {
+    
+        width: 10%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    #contenido .contenedor-mascotas .encabezado-seccion p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #contenido .contenedor-mascotas .encabezado-seccion p span {
+        font: bold 1.5vw verdana;
+        color: #3D2861;
+    
+    }
+    
+    
+    #contenido .contenedor-mascotas .perro-mascota{
+        margin-top: 2%;
+    
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #contenido .contenedor-mascotas .perro-mascota .card {
+    
+        width: 25%;
+        box-shadow: 0 4px 8px 0 rgba(190, 196, 0, 0.445),
+        inset 0 0 300px 50px white;
+        margin-bottom: 1%;
+        text-align: center;
+        font-family: arial;
+        font-size: .5vw;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #contenido .contenedor-mascotas .perro-mascota .card img{
+        width: 80%;
+        height: 50%;  
+        transition: 1s;
+    }
+    
+    #contenido .contenedor-mascotas .perro-mascota .card img:hover{
+        scale: 1.1;    
+    }
+    #contenido .contenedor-mascotas .perro-mascota .card .detalles{
+        flex: 1;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    #contenido .contenedor-mascotas .perro-mascota .card .detalles .dmascota {
+        color: grey;
+        font:normal 1.5vw verdana;
+    }
+    
+    #contenido .contenedor-mascotas .perro-mascota .card .detalles button {
+        border: none;
+        outline: 0;
+        padding: .5vw;
+        color: #3D2861;
+        border-radius: 1vw;
+        border: 1px solid #3D2861;
+        text-align: center;
+        cursor: pointer;
+        width: 90%;
+        font:normal 1vw verdana;
+    }
+    
+    #contenido .contenedor-mascotas .perro-mascota .card .detalles button:hover {
+        background-color: #3D2861;
+        color: white;
+    }
+    
+    
+    
+    
+    #pie-p{
+        width: 100%;
+        height: 20%;
+        background: #3D2861;
+    
+        display: flex;
+
+    }
+    
+    #pie-p .contenedor-pie{
+        border: 1px solid white;
+    
+        width: 100%;
+        height: 100%;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    
+    #pie-p .contenedor-pie .copy{
+        font: normal 1.5vw Moserrat;
+        margin-left: 4%;
+        color: #848487;
+        
+    }
+    
+    
+    #pie-p .contenedor-pie .sociales{
+        margin-right: 2%;   
+    
+        width: 15%;
+        height: 100%;
+        display: flex;
+
+    }
+    
+    #pie-p .contenedor-pie .sociales a{
+        text-decoration: none;
+        flex: 1;
+        height: 3vw;
+    }
+    #pie-p .contenedor-pie .sociales a:hover{
+    
+        background: #070013;
+    
+        flex: 1;
+        height: 100%;
+    }
+    
+    #pie-p .contenedor-pie .sociales a:first-child{
+        background: url("../rs/fb.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    
+    }
+    
+    #pie-p .contenedor-pie .sociales a:nth-child(2){
+        background: url("../rs/x.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    
+    }
+    #pie-p .contenedor-pie .sociales a:nth-child(3){
+        background: url("../rs/ig.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    
+    }
+    #pie-p .contenedor-pie .sociales a:last-child{
+        background: url("../rs/gg.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width: 1023px) { 
+    .contenedor-principal {
+        width: 100%;
+        height: 100vh;
+        /* background: #FFF5FF; */
+    
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #cabecera{
+        width: 100%;    
+        display: flex;
+    }
+    
+    #cabecera .cabecera-c{
+        width: 100%;    
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    
+    #cabecera .cabecera-c .marca{
+        width: 25%;
+        color: #BFC400;
+    
+        display: flex;
+        align-items: center;
+    
+    }
+    
+    #cabecera .cabecera-c .marca .logo{
+        width: 30%;
+        height: 100%;
+        background: url("../rs/logo.png"),white;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+        color: #BFC400;
+    }
+    
+    #cabecera .cabecera-c .marca .titulo{
+        flex: 1;
+    
+        padding: 0% 2%;
+        font: normal 1.5vw Monserrat;
+    
+        display: flex;
+        justify-content: space-between;
+    
+    }
+
+    
+    #cabecera .cabecera-c .menu{
+        flex: 1;
+    
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    #cabecera .cabecera-c .menu a{
+    
+        padding: .2vw;
+        text-decoration: none;
+        font: normal 2vw verdana;
+        border: 1px solid #3D2861;
+        border-radius: .5vw;
+        margin: 0% 1%;
+    
+        display: block;
+    
+    }
+    #cabecera .cabecera-c .menu a:hover{
+        background: #3D2861;
+        color: #FFFFFF;
+    
+    }
+    
+    #contenido {
+        flex: 1;
+        width: 100%;
+        padding: 1%;
+        /* background: #FFFFFF; */
+    
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #contenido .titulo {
+        width: 100%;
+        margin-left: 2%;
+        color: #BFC400;
+        font: normal 2.2vw Arial, sans-serif;
+    
+    }
+    
+    
+    #contenido .contenedor-mascotas {
+        margin-top: 2%;
+        width: 100%;
+    
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    
+    #contenido .contenedor-mascotas .encabezado-seccion {
+        width: 100%;
+        height: 5vw;
+    
+        display: flex;
+    }
+    
+    #contenido .contenedor-mascotas .encabezado-seccion .imagen-marca {
+    
+        width: 10%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    #contenido .contenedor-mascotas .encabezado-seccion p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #contenido .contenedor-mascotas .encabezado-seccion p span {
+        font: bold 4vw verdana;
+        color: #3D2861;
+    
+    }
+    
+    
+    #contenido .contenedor-mascotas .perro-mascota{
+        margin-top: 2%;
+    
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #contenido .contenedor-mascotas .perro-mascota .card {
+    
+        width: 50%;
+        box-shadow: 0 4px 8px 0 rgba(190, 196, 0, 0.445),
+        inset 0 0 300px 50px white;
+        margin-bottom: 1%;
+        text-align: center;
+        font-family: arial;
+        font-size: .5vw;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #contenido .contenedor-mascotas .perro-mascota .card img{
+        width: 80%;
+        height: 80%;  
+        transition: 1s;
+    }
+    
+    #contenido .contenedor-mascotas .perro-mascota .card img:hover{
+        scale: 1.1;    
+    }
+    #contenido .contenedor-mascotas .perro-mascota .card .detalles{
+        flex: 1;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #contenido .contenedor-mascotas .perro-mascota .card .detalles h1{
+        font: normal 2.5vw verdana;
+    
+    }
+    
+    #contenido .contenedor-mascotas .perro-mascota .card .detalles .dmascota {
+        color: grey;
+        font:normal 2.5vw verdana;
+    }
+    
+    #contenido .contenedor-mascotas .perro-mascota .card .detalles button {
+        border: none;
+        outline: 0;
+        padding: .5vw;
+        color: #3D2861;
+        border-radius: 1vw;
+        border: 1px solid #3D2861;
+        text-align: center;
+        cursor: pointer;
+        width: 90%;
+        font:normal 2vw verdana;
+    }
+    
+    #contenido .contenedor-mascotas .perro-mascota .card .detalles button:hover {
+        background-color: #3D2861;
+        color: white;
+    }
+    
+    
+    
+        
+    #pie-p{
+        width: 100%;
+        height: 20%;
+        background: #3D2861;
+    
+        display: flex;
+
+    }
+    
+    #pie-p .contenedor-pie{
+        border: 1px solid white;
+    
+        width: 100%;
+        height: 100%;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    
+    #pie-p .contenedor-pie .copy{
+        font: normal 3vw Moserrat;
+        margin-left: 4%;
+        color: #848487;
+        
+    }
+    
+    
+    #pie-p .contenedor-pie .sociales{
+        margin-right: 2%;   
+    
+        width: 15%;
+        height: 100%;
+        display: flex;
+
+    }
+    
+    #pie-p .contenedor-pie .sociales a{
+        text-decoration: none;
+        flex: 1;
+        height: 5vw;
+        margin: 0% 5%;
+    }
+    #pie-p .contenedor-pie .sociales a:hover{
+    
+        background: #070013;
+    
+        flex: 1;
+        height: 100%;
+    }
+    
+    #pie-p .contenedor-pie .sociales a:first-child{
+        background: url("../rs/fb.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    
+    }
+    
+    #pie-p .contenedor-pie .sociales a:nth-child(2){
+        background: url("../rs/x.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    
+    }
+    #pie-p .contenedor-pie .sociales a:nth-child(3){
+        background: url("../rs/ig.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    
+    }
+    #pie-p .contenedor-pie .sociales a:last-child{
+        background: url("../rs/gg.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    
+    }
+
+
+}
+
+
+@media (max-width: 767px) { 
+    .contenedor-principal {
+        width: 100%;
+        height: 100vh;
+        /* background: #FFF5FF; */
+    
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #cabecera{
+        width: 100%;
+    
+        display: flex;
+    }
+    
+    #cabecera .cabecera-c{
+        width: 100%;    
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    
+    #cabecera .cabecera-c .marca{
+        width: 40%;
+        color: #BFC400;
+        display: flex;
+        align-items: center;
+    
+    }
+    
+    #cabecera .cabecera-c .marca .logo{
+        width: 30%;
+        height: 100%;
+        background: url("../rs/logo.png"),white;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+        color: #BFC400;
+    }
+    
+    #cabecera .cabecera-c .marca .titulo{
+        flex: 1;    
+        font: normal 2.5vw Monserrat;
+    
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    
+
+    
+    #cabecera .cabecera-c .menu{
+        flex: 1;
+    
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    #cabecera .cabecera-c .menu a{
+    
+        padding: .2vw;
+        text-decoration: none;
+        font: normal 3.5vw verdana;
+        border: 1px solid #3D2861;
+        border-radius: .5vw;
+        margin: 0% 1%;
+    
+        display: block;
+    
+    }
+    #cabecera .cabecera-c .menu a:hover{
+        background: #3D2861;
+        color: #FFFFFF;
+    
+    }
+    
+    #contenido {
+        flex: 1;
+        width: 100%;
+        padding: 1%;
+        /* background: #FFFFFF; */
+    
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #contenido .titulo {
+        width: 100%;
+        margin-left: 2%;
+        color: #BFC400;
+        text-align: center;
+        font: normal 3vw Arial, sans-serif;
+    
+    }
+    
+    
+    #contenido .contenedor-mascotas {
+        margin-top: 2%;
+        width: 100%;
+    
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    
+    #contenido .contenedor-mascotas .encabezado-seccion {
+        width: 100%;
+        height: 5vw;
+    
+        display: flex;
+    }
+    
+    #contenido .contenedor-mascotas .encabezado-seccion .imagen-marca {
+    
+        width: 10%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    #contenido .contenedor-mascotas .encabezado-seccion p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #contenido .contenedor-mascotas .encabezado-seccion p span {
+        font: bold 5vw verdana;
+        color: #3D2861;
+    
+    }
+    
+    
+    #contenido .contenedor-mascotas .perro-mascota{
+        margin-top: 2%;
+    
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #contenido .contenedor-mascotas .perro-mascota .card {
+    
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(190, 196, 0, 0.445),
+        inset 0 0 300px 50px white;
+
+        margin-bottom: 1%;
+        text-align: center;
+        font-family: arial;
+        font-size: .5vw;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #contenido .contenedor-mascotas .perro-mascota .card img{
+        width: 80%;
+        height: 80%;  
+        transition: 1s;
+    }
+    
+    #contenido .contenedor-mascotas .perro-mascota .card img:hover{
+        scale: 1.1;    
+    }
+    #contenido .contenedor-mascotas .perro-mascota .card .detalles{
+        flex: 1;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #contenido .contenedor-mascotas .perro-mascota .card .detalles h1{
+        font: normal 4.5vw verdana;
+    
+    }
+    
+    #contenido .contenedor-mascotas .perro-mascota .card .detalles .dmascota {
+        color: grey;
+        font:normal 5vw verdana;
+    }
+    
+    #contenido .contenedor-mascotas .perro-mascota .card .detalles button {
+        border: none;
+        outline: 0;
+        padding: .5vw;
+        color: #3D2861;
+        border-radius: 1vw;
+        border: 1px solid #3D2861;
+        text-align: center;
+        cursor: pointer;
+        width: 90%;
+        font:normal 5vw verdana;
+    }
+    
+    #contenido .contenedor-mascotas .perro-mascota .card .detalles button:hover {
+        background-color: #3D2861;
+        color: white;
+    }
+    
+    
+    
+    #pie-p{
+        width: 100%;
+        height: 20%;
+        background: #3D2861;
+    
+        display: flex;
+
+    }
+    
+    #pie-p .contenedor-pie{
+        border: 1px solid white;
+    
+        width: 100%;
+        height: 100%;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    
+    #pie-p .contenedor-pie .copy{
+        font: normal 6vw Moserrat;
+        margin-left: 4%;
+        color: #848487;
+        
+    }
+    
+    
+    #pie-p .contenedor-pie .sociales{
+        margin-right: 2%;   
+    
+        width: 30%;
+        height: 100%;
+        display: flex;
+
+    }
+    
+    #pie-p .contenedor-pie .sociales a{
+        text-decoration: none;
+        flex: 1;
+        height: 8vw;
+        margin: 0% 2%;
+    }
+    #pie-p .contenedor-pie .sociales a:hover{
+    
+        background: #070013;
+    
+        flex: 1;
+        height: 100%;
+    }
+    
+    #pie-p .contenedor-pie .sociales a:first-child{
+        background: url("../rs/fb.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    
+    }
+    
+    #pie-p .contenedor-pie .sociales a:nth-child(2){
+        background: url("../rs/x.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    
+    }
+    #pie-p .contenedor-pie .sociales a:nth-child(3){
+        background: url("../rs/ig.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    
+    }
+    #pie-p .contenedor-pie .sociales a:last-child{
+        background: url("../rs/gg.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    
+    }
+
+}

@@ -1,0 +1,1279 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: url("../rs/loginb.png") #F4F4F4;
+    overflow-x: hidden;
+}
+
+#cabecera {
+    box-shadow: inset 0px 0px 100px 5px white;
+}
+
+#contenedor-p #banner .contenedor-banner {
+    box-shadow: inset 0px 0px 200px 5px white;
+}
+
+#contenedor-p #banner .contenedor-banner a {
+    transition: transform 0.3s ease;
+}
+
+#contenedor-p #banner .contenedor-banner a:hover {
+    background: #3D2861;
+    color: white;
+    transform: scale(1.1);
+}
+
+#contenedor-p #bienvenidos {
+    box-shadow: inset 0px 0px 200px 5px white;
+}
+
+#contenedor-p #Blog h3 {
+    box-shadow: inset 0px 0px 100px 1px white;
+}
+
+#contenedor-p #Blog .contenedor-blog .mascota-nueva {
+    margin: 1%;
+    box-shadow: inset 0px 0px 200px 0px white;
+    border-radius: 1%;
+    transition: 1s;
+}
+
+#contenedor-p #Blog .contenedor-blog .mascota-nueva:hover {
+    border-radius: 1%;
+    box-shadow: inset 0px 0px 200px 100px white;
+    scale: 1.1;
+}
+
+#contenedor-p #info h3 {
+    box-shadow: inset 0px 0px 200px 5px white;
+}
+
+#contenedor-p #info .contenedor-info .info-mascota {
+    margin: 1%;
+    border-radius: 1%;
+    box-shadow: inset 0px 0px 500px 0px white;
+}
+
+
+
+@media (min-width: 1024px) {
+
+    .contenedor-principal {
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    #cabecera {
+        width: 100%;
+        height: 4vw;
+
+        display: flex;
+    }
+
+    #cabecera .cabecera-c {
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    #cabecera .cabecera-c .marca {
+        width: 20%;
+        color: #BFC400;
+
+        display: flex;
+        align-items: center;
+
+    }
+
+    #cabecera .cabecera-c .marca .logo {
+        width: 20%;
+        height: 100%;
+        background: url("../rs/logo.png"), white;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+        color: #BFC400;
+    }
+
+    #cabecera .cabecera-c .marca .titulo {
+        flex: 1;
+
+        padding: 0% 2%;
+        font: normal 1vw Monserrat;
+
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+
+    #cabecera .cabecera-c .menu {
+        flex: 1;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #cabecera .cabecera-c .menu a {
+
+        padding: .2vw;
+        text-decoration: none;
+        font: normal 1.2vw verdana;
+        border: 1px solid #3D2861;
+        border-radius: .5vw;
+        margin: 0% 1%;
+
+        display: block;
+
+    }
+
+    #cabecera .cabecera-c .menu a:hover {
+        background: #3D2861;
+        color: #FFFFFF;
+
+    }
+
+    #contenedor-p {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #contenedor-p #banner {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    #contenedor-p #banner .imagen {
+        margin-top: 1%;
+        width: 100%;
+        height: 25vw;
+        background: url("../rs/banner.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #contenedor-p #banner .contenedor-banner {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    #contenedor-p #banner .contenedor-banner h2 {
+        text-align: center;
+        font: bold 3vw Monserrat;
+        width: 100%;
+        color: #BFC400;
+    }
+
+    #contenedor-p #banner .contenedor-banner p {
+        text-align: center;
+        font: bold 1.5vw Monserrat;
+        width: 100%;
+    }
+
+    #contenedor-p #banner .contenedor-banner a {
+        text-decoration: none;
+        font: bold 1vw Monserrat;
+        padding: .2%;
+        margin-bottom: 1%;
+
+        border: 1px solid #3D2861;
+        border-radius: 1vw;
+        text-align: center;
+        display: block;
+    }
+
+    #contenedor-p #bienvenidos {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #contenedor-p #bienvenidos h2 {
+        text-align: center;
+        font: bold 3vw Monserrat;
+        color: #BFC400;
+        width: 100%;
+    }
+
+    #contenedor-p #bienvenidos p {
+        width: 50%;
+        margin: 1% 0%;
+        font: bold 1vw Monserrat;
+    }
+
+    #contenedor-p #Blog {
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    #contenedor-p #Blog h3 {
+        margin-top: 2%;
+        width: 100%;
+        font: bold 2vw Monserrat;
+        color: #BFC400;
+        text-align: center;
+    }
+
+
+    #contenedor-p #Blog .contenedor-blog {
+
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    #contenedor-p #Blog .contenedor-blog .mascota-nueva {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contenedor-p #Blog .contenedor-blog .mascota-nueva h4 {
+        text-align: center;
+        font: bold 1vw Monserrat;
+    }
+
+    #contenedor-p #Blog .contenedor-blog .mascota-nueva:first-child div {
+        height: 25VW;
+
+        background: url("../rs/nuevo1.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #Blog .contenedor-blog .mascota-nueva:nth-child(2) div {
+        height: 25VW;
+
+        background: url("../rs/nuevo2.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #Blog .contenedor-blog .mascota-nueva:last-child div {
+        height: 25VW;
+        background: url("../rs/nuevo3.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #info {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    #contenedor-p #info h3 {
+        margin-top: 2%;
+        width: 100%;
+        font: bold 2vw Monserrat;
+        color: #BFC400;
+        text-align: center;
+    }
+
+    #contenedor-p #info .contenedor-info {
+        width: 100%;
+        display: flex;
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        /* margin: 1%; */
+        /* border-radius: 1%;
+        box-shadow: inset 0px 0px 500px 0px white; */
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota h4 {
+        text-align: center;
+        font: bold 2vw Monserrat;
+        margin-bottom: 10%;
+
+
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota:first-child div {
+        height: 25VW;
+
+        background: url("../rs/adorable1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota:nth-child(2) div {
+        height: 25VW;
+
+        background: url("../rs/adorable2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota:nth-child(3) div {
+        height: 25VW;
+
+        background: url("../rs/adorable3.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota:last-child div {
+        height: 25VW;
+        background: url("../rs/adorable4.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+
+    #pie-p {
+        width: 100%;
+        height: 20%;
+        background: #3D2861;
+
+        display: flex;
+
+    }
+
+    #pie-p .contenedor-pie {
+        border: 1px solid white;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    #pie-p .contenedor-pie .copy {
+        font: normal 1.5vw Moserrat;
+        margin-left: 4%;
+        color: #848487;
+
+    }
+
+
+    #pie-p .contenedor-pie .sociales {
+        margin-right: 2%;
+
+        width: 15%;
+        height: 100%;
+        display: flex;
+
+
+    }
+
+    #pie-p .contenedor-pie .sociales a {
+
+        text-decoration: none;
+        flex: 1;
+        height: 3vw;
+    }
+
+    #pie-p .contenedor-pie .sociales a:hover {
+
+        background: #070013;
+
+        flex: 1;
+        height: 100%;
+    }
+
+    #pie-p .contenedor-pie .sociales a:first-child {
+        background: url("../rs/fb.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+    #pie-p .contenedor-pie .sociales a:nth-child(2) {
+        background: url("../rs/x.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+    #pie-p .contenedor-pie .sociales a:nth-child(3) {
+        background: url("../rs/ig.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+    #pie-p .contenedor-pie .sociales a:last-child {
+        background: url("../rs/gg.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .contenedor-principal {
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    #cabecera {
+        width: 100%;
+        height: 4vw;
+
+        display: flex;
+    }
+
+    #cabecera .cabecera-c {
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    #cabecera .cabecera-c .marca {
+        width: 25%;
+        color: #BFC400;
+
+        display: flex;
+        align-items: center;
+
+    }
+
+    #cabecera .cabecera-c .marca .logo {
+        width: 30%;
+        height: 100%;
+        background: url("../rs/logo.png"), white;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+        color: #BFC400;
+    }
+
+    #cabecera .cabecera-c .marca .titulo {
+        flex: 1;
+
+        padding: 0% 2%;
+        font: normal 1.5vw Monserrat;
+
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+
+
+    #cabecera .cabecera-c .menu {
+        flex: 1;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #cabecera .cabecera-c .menu a {
+
+        padding: .2vw;
+        text-decoration: none;
+        font: normal 2vw verdana;
+        border: 1px solid #3D2861;
+        border-radius: .5vw;
+        margin: 0% 1%;
+
+        display: block;
+
+    }
+
+    #cabecera .cabecera-c .menu a:hover {
+        background: #3D2861;
+        color: #FFFFFF;
+
+    }
+
+    #contenedor-p {
+        flex: 1;
+
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #contenedor-p #banner {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #contenedor-p #banner .imagen {
+        margin-top: 1%;
+        width: 100%;
+        height: 25vw;
+        background: url("../rs/banner.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #contenedor-p #banner .contenedor-banner {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0px 0px 200px 5px white;
+
+
+    }
+
+
+    #contenedor-p #banner .contenedor-banner h2 {
+        text-align: center;
+        font: bold 5vw Monserrat;
+        width: 100%;
+        color: #BFC400;
+    }
+
+    #contenedor-p #banner .contenedor-banner p {
+        text-align: center;
+        font: bold 2vw Monserrat;
+        width: 100%;
+    }
+
+    #contenedor-p #banner .contenedor-banner a {
+        text-decoration: none;
+        font: bold 1.8vw Monserrat;
+        padding: .2%;
+        margin-bottom: 1%;
+
+        border: 1px solid #3D2861;
+        border-radius: 1vw;
+        text-align: center;
+        display: block;
+        transition: transform 0.3s ease;
+
+    }
+
+    #contenedor-p #banner .contenedor-banner a:hover {
+        background: #3D2861;
+        color: white;
+        transform: scale(1.1);
+
+    }
+
+    #contenedor-p #bienvenidos {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #contenedor-p #bienvenidos h2 {
+        text-align: center;
+        font: bold 5vw Monserrat;
+        color: #BFC400;
+        width: 100%;
+    }
+
+    #contenedor-p #bienvenidos p {
+        width: 80%;
+        margin: 1% 0%;
+        font: bold 2vw Monserrat;
+    }
+
+
+    #contenedor-p #Blog {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    #contenedor-p #Blog h3 {
+        margin-top: 2%;
+        width: 100%;
+        font: bold 5vw Monserrat;
+        color: #BFC400;
+        text-align: center;
+
+
+    }
+
+
+    #contenedor-p #Blog .contenedor-blog {
+
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #contenedor-p #Blog .contenedor-blog .mascota-nueva {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contenedor-p #Blog .contenedor-blog .mascota-nueva h4 {
+        text-align: center;
+        font: bold 2vw Monserrat;
+
+
+    }
+
+    #contenedor-p #Blog .contenedor-blog .mascota-nueva:first-child div {
+        height: 25VW;
+
+        background: url("../rs/nuevo1.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #Blog .contenedor-blog .mascota-nueva:nth-child(2) div {
+        height: 25VW;
+
+        background: url("../rs/nuevo2.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #Blog .contenedor-blog .mascota-nueva:last-child div {
+        height: 25VW;
+        background: url("../rs/nuevo3.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+
+    #contenedor-p #info {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    #contenedor-p #info h3 {
+        margin-top: 2%;
+        width: 100%;
+        font: bold 5vw Monserrat;
+        color: #BFC400;
+        text-align: center;
+
+
+    }
+
+
+    #contenedor-p #info .contenedor-info {
+
+        width: 100%;
+        display: flex;
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota h4 {
+        text-align: center;
+        font: bold 2.8vw Monserrat;
+        margin-bottom: 10%;
+
+
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota:first-child div {
+        height: 25VW;
+
+        background: url("../rs/adorable1.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota:nth-child(2) div {
+        height: 25VW;
+
+        background: url("../rs/adorable2.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota:nth-child(3) div {
+        height: 25VW;
+
+        background: url("../rs/adorable3.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota:last-child div {
+        height: 25VW;
+        background: url("../rs/adorable4.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+
+
+    #pie-p {
+        width: 100%;
+        height: 20%;
+        background: #3D2861;
+
+        display: flex;
+    }
+
+    #pie-p .contenedor-pie {
+        border: 1px solid white;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    #pie-p .contenedor-pie .copy {
+        font: normal 3vw Moserrat;
+        margin-left: 4%;
+        color: #848487;
+
+    }
+
+
+    #pie-p .contenedor-pie .sociales {
+        margin-right: 2%;
+
+        width: 15%;
+        height: 100%;
+        display: flex;
+
+    }
+
+    #pie-p .contenedor-pie .sociales a {
+        text-decoration: none;
+        flex: 1;
+        height: 5vw;
+        margin: 0% 5%;
+    }
+
+    #pie-p .contenedor-pie .sociales a:hover {
+
+        background: #070013;
+
+        flex: 1;
+        height: 100%;
+    }
+
+    #pie-p .contenedor-pie .sociales a:first-child {
+        background: url("../rs/fb.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+    #pie-p .contenedor-pie .sociales a:nth-child(2) {
+        background: url("../rs/x.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+    #pie-p .contenedor-pie .sociales a:nth-child(3) {
+        background: url("../rs/ig.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+    #pie-p .contenedor-pie .sociales a:last-child {
+        background: url("../rs/gg.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .contenedor-principal {
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    #cabecera {
+        width: 100%;
+
+        display: flex;
+    }
+
+    #cabecera .cabecera-c {
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    #cabecera .cabecera-c .marca {
+        width: 40%;
+        color: #BFC400;
+
+        display: flex;
+        align-items: center;
+
+    }
+
+    #cabecera .cabecera-c .marca .logo {
+        width: 30%;
+        height: 100%;
+        background: url("../rs/logo.png"), white;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+        color: #BFC400;
+    }
+
+    #cabecera .cabecera-c .marca .titulo {
+        flex: 1;
+
+        font: normal 2.5vw Monserrat;
+
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+
+
+    #cabecera .cabecera-c .menu {
+        flex: 1;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #cabecera .cabecera-c .menu a {
+
+        padding: .2vw;
+        text-decoration: none;
+        font: normal 3.5vw verdana;
+        border: 1px solid #3D2861;
+        border-radius: .5vw;
+        margin: 0% 1%;
+
+        display: block;
+
+    }
+
+    #cabecera .cabecera-c .menu a:hover {
+        background: #3D2861;
+        color: #FFFFFF;
+
+    }
+
+    #contenedor-p {
+        flex: 1;
+
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #contenedor-p #banner {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #contenedor-p #banner .imagen {
+        margin-top: 1%;
+        width: 100%;
+        height: 25vw;
+        background: url("../rs/banner.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #contenedor-p #banner .contenedor-banner {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    #contenedor-p #banner .contenedor-banner h2 {
+        text-align: center;
+        font: bold 9vw Monserrat;
+        width: 100%;
+        color: #BFC400;
+    }
+
+    #contenedor-p #banner .contenedor-banner p {
+        text-align: center;
+        font: bold 4vw Monserrat;
+        width: 100%;
+    }
+
+    #contenedor-p #banner .contenedor-banner a {
+        text-decoration: none;
+        font: bold 3.5vw Monserrat;
+        padding: .2%;
+        margin-bottom: 1%;
+
+        border: 1px solid #3D2861;
+        border-radius: 1vw;
+        text-align: center;
+        display: block;
+
+    }
+
+    #contenedor-p #banner .contenedor-banner a:hover {
+        background: #3D2861;
+        color: white;
+    }
+
+    #contenedor-p #bienvenidos {
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #contenedor-p #bienvenidos h2 {
+        text-align: center;
+        font: bold 9vw Monserrat;
+        color: #BFC400;
+        width: 100%;
+    }
+
+    #contenedor-p #bienvenidos p {
+        width: 100%;
+        margin: 1% 0%;
+        text-align: justify;
+        font: bold 3.5vw Monserrat;
+    }
+
+
+    #contenedor-p #Blog {
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    #contenedor-p #Blog h3 {
+        margin-top: 2%;
+        width: 100%;
+        font: bold 9vw Monserrat;
+        color: #BFC400;
+        text-align: center;
+
+
+    }
+
+
+    #contenedor-p #Blog .contenedor-blog {
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #contenedor-p #Blog .contenedor-blog .mascota-nueva {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contenedor-p #Blog .contenedor-blog .mascota-nueva h4 {
+        text-align: center;
+        font: bold 4vw Monserrat;
+
+
+    }
+
+    #contenedor-p #Blog .contenedor-blog .mascota-nueva:first-child div {
+        height: 25VW;
+
+        background: url("../rs/nuevo1.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #Blog .contenedor-blog .mascota-nueva:nth-child(2) div {
+        height: 25VW;
+
+        background: url("../rs/nuevo2.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #Blog .contenedor-blog .mascota-nueva:last-child div {
+        height: 25VW;
+        background: url("../rs/nuevo3.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+
+    #contenedor-p #info {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    #contenedor-p #info h3 {
+        margin-top: 2%;
+        width: 100%;
+        font: bold 9vw Monserrat;
+        color: #BFC400;
+        text-align: center;
+
+
+    }
+
+
+    #contenedor-p #info .contenedor-info {
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #contenedor-p #info .contenedor-info .info-mascota {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota h4 {
+        text-align: center;
+        font: bold 5vw Monserrat;
+        margin-bottom: 10%;
+
+
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota:first-child div {
+        height: 25VW;
+
+        background: url("../rs/adorable1.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota:nth-child(2) div {
+        height: 25VW;
+
+        background: url("../rs/adorable2.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota:nth-child(3) div {
+        height: 25VW;
+
+        background: url("../rs/adorable3.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    #contenedor-p #info .contenedor-info .info-mascota:last-child div {
+        height: 25VW;
+        background: url("../rs/adorable4.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+
+
+    #pie-p {
+        width: 100%;
+        height: 20%;
+        background: #3D2861;
+
+        display: flex;
+    }
+
+    #pie-p .contenedor-pie {
+        border: 1px solid white;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    #pie-p .contenedor-pie .copy {
+        font: normal 6vw Moserrat;
+        margin-left: 4%;
+        color: #848487;
+
+    }
+
+
+    #pie-p .contenedor-pie .sociales {
+        margin-right: 2%;
+
+        width: 30%;
+        height: 100%;
+        display: flex;
+    }
+
+    #pie-p .contenedor-pie .sociales a {
+        text-decoration: none;
+        flex: 1;
+        height: 8vw;
+        margin: 0% 2%;
+    }
+
+    #pie-p .contenedor-pie .sociales a:hover {
+
+        background: #070013;
+
+        flex: 1;
+        height: 100%;
+    }
+
+    #pie-p .contenedor-pie .sociales a:first-child {
+        background: url("../rs/fb.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+    #pie-p .contenedor-pie .sociales a:nth-child(2) {
+        background: url("../rs/x.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+    #pie-p .contenedor-pie .sociales a:nth-child(3) {
+        background: url("../rs/ig.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+    #pie-p .contenedor-pie .sociales a:last-child {
+        background: url("../rs/gg.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+}
