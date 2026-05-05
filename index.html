@@ -1,93 +1,752 @@
-<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="stylesheet" href="./css/index.css"> <title>Política de Privacidad - CopalilloConecta</title> </head> <body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Políticas de Privacidad · Luxfero</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <header>
-    <img src="recursos/imagenes/logo.png" alt="Logo de KOWA" />
-    <h1>Política de Privacidad y Condiciones de Uso</h1>
+    :root {
+      --rosa:    #F9C7CF;
+      --amarillo:#FDF1BA;
+      --verde:   #B8E0D2;
+      --lila:    #E4C7F9;
+      --azul:    #C7E8F3;
+      --boton:   #F29B94;
+      --text:    #555453;
+      --muted:   #6D6D6D;
+      --lila-dark: #97629E;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      background: #fdf8f8;
+    }
+
+    .view { display: none; }
+    .view.active { display: block; }
+
+    /* ══════ HOME ══════ */
+    #home { min-height: 100vh; display: flex; flex-direction: column; }
+
+    .home-hero {
+      background: linear-gradient(150deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+      padding: 70px 24px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .home-hero::before {
+      content: '';
+      position: absolute;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(151,98,158,0.25) 0%, transparent 70%);
+      top: -100px; right: -100px;
+      border-radius: 50%;
+    }
+
+    .home-hero::after {
+      content: '';
+      position: absolute;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(113,163,207,0.2) 0%, transparent 70%);
+      bottom: -80px; left: -60px;
+      border-radius: 50%;
+    }
+
+    .luxfero-logo {
+      position: relative; z-index: 1;
+      margin-bottom: 28px;
+    }
+
+    .logo-mark {
+      width: 68px; height: 68px;
+      background: linear-gradient(135deg, var(--lila-dark), #71A3CF);
+      border-radius: 20px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 14px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900; font-size: 28px;
+      color: #fff; letter-spacing: -1px;
+    }
+
+    .luxfero-logo h1 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900; font-size: 2.2em;
+      color: #fff; letter-spacing: -0.5px;
+    }
+
+    .luxfero-logo p {
+      font-size: 13px; color: rgba(255,255,255,0.45);
+      margin-top: 4px; letter-spacing: 0.5px;
+    }
+
+    .home-hero h2 {
+      position: relative; z-index: 1;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.05em; font-weight: 700;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 6px;
+    }
+
+    .home-hero p.hero-sub {
+      position: relative; z-index: 1;
+      font-size: 13px; color: rgba(255,255,255,0.35);
+    }
+
+    .apps-section {
+      flex: 1;
+      max-width: 720px;
+      margin: 0 auto; width: 100%;
+      padding: 48px 24px 60px;
+    }
+
+    .apps-section > p {
+      font-size: 13px; color: var(--muted);
+      text-align: center; margin-bottom: 28px;
+    }
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .app-card {
+      border-radius: 22px;
+      padding: 28px 24px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative; overflow: hidden;
+      text-align: left;
+    }
+
+    .app-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+
+    .app-card.bocados {
+      background: #fff;
+      border: 1.5px solid #f0e8e8;
+      border-top: 4px solid var(--boton);
+    }
+
+    .app-card.kowa {
+      background: #1c1c1c;
+      border: 1.5px solid #2a2a2a;
+      border-top: 4px solid #f2a365;
+    }
+
+    .card-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; margin-bottom: 16px;
+    }
+
+    .bocados .card-icon { background: var(--rosa); }
+    .kowa .card-icon    { background: rgba(242,163,101,0.12); }
+
+    .app-card h3 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.2em; font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .bocados h3 { color: #6a3a44; }
+    .kowa h3    { color: #f2a365; }
+
+    .card-sub { font-size: 12.5px; margin-bottom: 16px; }
+    .bocados .card-sub { color: var(--muted); }
+    .kowa .card-sub    { color: #777; }
+
+    .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+
+    .tag {
+      font-size: 11.5px; font-weight: 600;
+      padding: 3px 10px; border-radius: 20px;
+    }
+
+    .bocados .tag { background: var(--amarillo); color: #7a6a30; }
+    .kowa .tag    { background: rgba(242,163,101,0.12); color: #f2a365; }
+
+    .card-cta {
+      display: flex; align-items: center; gap: 6px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 13.5px; font-weight: 700;
+    }
+
+    .bocados .card-cta { color: var(--boton); }
+    .kowa .card-cta    { color: #f2a365; }
+
+    .arrow { transition: transform 0.2s; }
+    .app-card:hover .arrow { transform: translateX(4px); }
+
+    .home-footer {
+      text-align: center; padding: 20px;
+      font-size: 12px; color: #bbb;
+      border-top: 1px solid #f0e8e8;
+    }
+
+    /* ══════ POLICY NAV ══════ */
+    .policy-nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 20px;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .bocados-nav { background: rgba(253,241,186,0.88); }
+    .kowa-nav    { background: rgba(20,20,20,0.93); border-bottom-color: #2a2a2a; }
+
+    .nav-back {
+      background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; gap: 6px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px; font-weight: 700;
+      padding: 6px 12px; border-radius: 20px;
+      transition: background 0.2s;
+    }
+
+    .bocados-nav .nav-back { color: #7a5030; background: rgba(242,155,148,0.15); }
+    .bocados-nav .nav-back:hover { background: rgba(242,155,148,0.3); }
+    .kowa-nav .nav-back    { color: #f2a365; background: rgba(242,163,101,0.1); }
+    .kowa-nav .nav-back:hover { background: rgba(242,163,101,0.2); }
+
+    .nav-title {
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px; font-weight: 800;
+    }
+
+    .bocados-nav .nav-title { color: #6a3a44; }
+    .kowa-nav .nav-title    { color: #f2a365; }
+
+    /* ══════ HEADERS ══════ */
+    .header-bocados {
+      background: linear-gradient(135deg, var(--rosa) 0%, var(--amarillo) 50%, var(--verde) 100%);
+      padding: 52px 24px 40px;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+
+    .header-bocados::before {
+      content: ''; position: absolute;
+      top: -40px; right: -40px;
+      width: 180px; height: 180px;
+      background: var(--lila); opacity: 0.35; border-radius: 50%;
+    }
+
+    .header-bocados::after {
+      content: ''; position: absolute;
+      bottom: -30px; left: -20px;
+      width: 140px; height: 140px;
+      background: var(--azul); opacity: 0.3; border-radius: 50%;
+    }
+
+    .app-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.6);
+      border-radius: 30px; padding: 5px 18px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 12px; font-weight: 800;
+      color: var(--lila-dark);
+      letter-spacing: 0.8px; text-transform: uppercase;
+      margin-bottom: 12px;
+      position: relative; z-index: 1;
+    }
+
+    .header-bocados h1 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 2em; font-weight: 800;
+      color: #6a3a44;
+      position: relative; z-index: 1; margin-bottom: 6px;
+    }
+
+    .dev-credit {
+      font-size: 13px;
+      position: relative; z-index: 1;
+    }
+
+    .header-bocados .dev-credit { color: #7a5058; }
+
+    .header-kowa {
+      background: #1a1a1a;
+      padding: 52px 24px 40px;
+      text-align: center;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .app-badge-kowa {
+      display: inline-block;
+      background: rgba(242,163,101,0.12);
+      border-radius: 30px; padding: 5px 18px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 12px; font-weight: 800;
+      color: #f2a365;
+      letter-spacing: 0.8px; text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .header-kowa h1 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 2em; font-weight: 800;
+      color: #fff; margin-bottom: 6px;
+    }
+
+    .header-kowa .dev-credit { color: #666; }
+
+    /* ══════ POLICY CONTENT ══════ */
+    .policy-main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+
+    .kowa-bg { background: #121212; }
+
+    .date-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      border-radius: 20px; padding: 5px 16px;
+      font-size: 13px; font-weight: 600; margin-bottom: 28px;
+    }
+
+    .bocados-date { background: var(--amarillo); color: #7a6a30; }
+    .kowa-date    { background: rgba(242,163,101,0.12); color: #f2a365; }
+
+    .intro-card {
+      border-radius: 16px; padding: 20px 24px;
+      margin-bottom: 32px; border-left: 5px solid;
+    }
+
+    .bocados-intro { background: #fff; border-left-color: var(--boton); }
+    .kowa-intro    { background: #1e1e1e; border-left-color: #f2a365; }
+
+    .bocados-intro p { color: var(--muted); font-size: 15px; }
+    .kowa-intro p    { color: #aaa; font-size: 15px; }
+
+    .section { margin-bottom: 28px; }
+
+    .section-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 12px;
+    }
+
+    .section-icon {
+      width: 38px; height: 38px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px; flex-shrink: 0;
+    }
+
+    .icon-rosa     { background: var(--rosa); }
+    .icon-verde    { background: var(--verde); }
+    .icon-amarillo { background: var(--amarillo); }
+    .icon-lila     { background: var(--lila); }
+    .icon-azul     { background: var(--azul); }
+    .icon-kowa     { background: rgba(242,163,101,0.12); }
+
+    .section h2 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.05em; font-weight: 800;
+    }
+
+    .bocados-section h2 { color: #6a3a44; }
+    .kowa-section h2    { color: #f2a365; }
+
+    .section-body {
+      border-radius: 16px; padding: 18px 22px; border: 1.5px solid;
+    }
+
+    .bocados-body { background: #fff; border-color: #f5eaea; }
+    .kowa-body    { background: #1e1e1e; border-color: #2a2a2a; }
+
+    .bocados-body p { font-size: 14.5px; color: var(--muted); margin-bottom: 10px; }
+    .kowa-body p    { font-size: 14.5px; color: #aaa; margin-bottom: 10px; }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    ul.pill-list {
+      list-style: none; padding: 0;
+      display: flex; flex-direction: column; gap: 7px; margin-top: 10px;
+    }
+
+    ul.pill-list li {
+      border-radius: 10px; padding: 9px 14px;
+      font-size: 14px; border-left: 3px solid;
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+
+    ul.pill-list li::before {
+      content: '•'; font-weight: 800; flex-shrink: 0; margin-top: 1px;
+    }
+
+    .bocados-list li { background: #fdf8f8; border-left-color: var(--boton); color: var(--muted); }
+    .bocados-list li::before { color: var(--boton); }
+    .kowa-list li    { background: #181818; border-left-color: #f2a365; color: #aaa; }
+    .kowa-list li::before { color: #f2a365; }
+
+    .contact-card {
+      border-radius: 20px; padding: 28px 24px;
+      text-align: center; margin-top: 36px;
+    }
+
+    .bocados-contact { background: linear-gradient(135deg, var(--rosa), var(--lila)); }
+    .kowa-contact    { background: #1e1e1e; border: 1px solid #2a2a2a; }
+
+    .contact-card h2 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.1em; font-weight: 800; margin-bottom: 8px;
+    }
+
+    .bocados-contact h2 { color: #6a3a44; }
+    .kowa-contact h2    { color: #f2a365; }
+
+    .contact-card p { font-size: 14px; margin-bottom: 16px; }
+    .bocados-contact p { color: #7a5058; }
+    .kowa-contact p    { color: #777; }
+
+    .contact-btn {
+      display: inline-block;
+      font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 14px;
+      padding: 10px 28px; border-radius: 30px;
+      text-decoration: none; transition: opacity 0.2s; color: #fff;
+    }
+
+    .bocados-btn { background: var(--boton); }
+    .kowa-btn    { background: #f2a365; color: #1a1a1a; }
+    .contact-btn:hover { opacity: 0.85; }
+
+    .policy-footer {
+      text-align: center; padding: 22px;
+      font-size: 12.5px; border-top: 1px solid;
+    }
+
+    .bocados-footer { color: #bbb; border-top-color: #f0e8e8; background: #fdf8f8; }
+    .kowa-footer    { color: #444; border-top-color: #2a2a2a; background: #121212; }
+
+    @media (max-width: 480px) {
+      .luxfero-logo h1 { font-size: 1.8em; }
+      .home-hero { padding: 52px 18px 44px; }
+      .apps-section { padding: 32px 16px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════ HOME ═══════════════════ -->
+<div id="home" class="view active">
+
+  <div class="home-hero">
+    <div class="luxfero-logo">
+      <div class="logo-mark">Lx</div>
+      <h1>Luxfero</h1>
+      <p>Desarrollo de Software</p>
+    </div>
+    <h2>Políticas de Privacidad</h2>
+    <p class="hero-sub">Selecciona la aplicación que deseas consultar</p>
+  </div>
+
+  <div class="apps-section">
+    <p>Todas nuestras aplicaciones cumplen con estándares de privacidad y protección de datos.</p>
+    <div class="apps-grid">
+
+      <div class="app-card bocados" onclick="showView('bocados')">
+        <div class="card-icon">🍼</div>
+        <h3>Primeros Bocados</h3>
+        <p class="card-sub">Guía de alimentación complementaria para bebés</p>
+        <div class="card-tags">
+          <span class="tag">Familia</span>
+          <span class="tag">Recetas</span>
+          <span class="tag">Bebés</span>
+        </div>
+        <div class="card-cta">Ver política de privacidad <span class="arrow">→</span></div>
+      </div>
+
+      <div class="app-card kowa" onclick="showView('kowa')">
+        <div class="card-icon">🔗</div>
+        <h3>KOWA</h3>
+        <p class="card-sub">Plataforma de conexión para negocios locales</p>
+        <div class="card-tags">
+          <span class="tag">Negocios</span>
+          <span class="tag">Comunidad</span>
+          <span class="tag">Pedidos</span>
+        </div>
+        <div class="card-cta">Ver política de privacidad <span class="arrow">→</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="home-footer">
+    &copy; 2026 Luxfero Desarrollo de Software · Todos los derechos reservados
+  </footer>
+
+</div>
+
+<!-- ═══════════════════ PRIMEROS BOCADOS ═══════════════════ -->
+<div id="bocados" class="view">
+
+  <nav class="policy-nav bocados-nav">
+    <button class="nav-back" onclick="showView('home')">← Volver</button>
+    <span class="nav-title">Primeros Bocados · Política de Privacidad</span>
+  </nav>
+
+  <header class="header-bocados">
+    <div class="app-badge">Primeros Bocados</div>
+    <h1>Política de Privacidad</h1>
+    <p class="dev-credit">Luxfero Desarrollo de Software</p>
   </header>
 
-  <main>
-    <p><strong>Última actualización:</strong> 04 de septiembre de 2025</p>
+  <main class="policy-main">
+    <div class="date-tag bocados-date">📅 Última actualización: 04 de mayo de 2026</div>
 
-    <p>
-      En <strong>KOWA</strong>, valoramos la privacidad de los usuarios y fomentamos un uso responsable de la plataforma. Esta aplicación tiene como propósito conectar negocios locales, comunidades y usuarios, facilitando el registro de productos, servicios y pedidos.
-    </p>
+    <div class="intro-card bocados-intro">
+      <p><strong>Luxfero Desarrollo de Software</strong>, desarrollador de <strong>Primeros Bocados</strong>, se compromete a proteger tu privacidad y la de tu familia. Esta política describe qué información recopilamos, cómo la usamos y cómo la protegemos.</p>
+    </div>
 
-    <h2>1. Información que Recopilamos</h2>
-    <p>
-      Para ofrecer todas las funciones de la app, solicitamos ciertos datos al momento de registrarte:
-      <ul>
-        <li>Correo electrónico y contraseña (para autenticación).</li>
-        <li>Datos de tu negocio (nombre, descripción, teléfonos, imágenes, ubicación, categoría).</li>
-        <li>Datos opcionales del perfil de usuario.</li>
-      </ul>
-      Estos datos son almacenados de forma segura en servidores externos.
-    </p>
+    <div class="section bocados-section">
+      <div class="section-header">
+        <div class="section-icon icon-rosa">📋</div>
+        <h2>1. Información que recopilamos</h2>
+      </div>
+      <div class="section-body bocados-body">
+        <p>Para brindarte la mejor experiencia, podemos recopilar:</p>
+        <ul class="pill-list bocados-list">
+          <li>Correo electrónico y contraseña para autenticación.</li>
+          <li>Datos opcionales del perfil, como nombre de usuario.</li>
+          <li>Recetas registradas por el usuario (ingredientes, descripciones e imágenes).</li>
+          <li>Información del bebé ingresada voluntariamente (edad, etapa de alimentación).</li>
+        </ul>
+      </div>
+    </div>
 
-    <h2>2. Uso de la Información</h2>
-    <p>
-      La información se utiliza para:
-      <ul>
-        <li>Permitir la creación y administración de negocios.</li>
-        <li>Mostrar productos y servicios en la app.</li>
-        <li>Gestionar suscripciones, planes y beneficios.</li>
-        <li>Facilitar la interacción entre usuarios y negocios.</li>
-      </ul>
-    </p>
+    <div class="section bocados-section">
+      <div class="section-header">
+        <div class="section-icon icon-verde">⚙️</div>
+        <h2>2. Uso de la información</h2>
+      </div>
+      <div class="section-body bocados-body">
+        <p>La información recopilada se utiliza exclusivamente para:</p>
+        <ul class="pill-list bocados-list">
+          <li>Permitir el acceso y uso de la app mediante autenticación segura.</li>
+          <li>Mostrar recetas recomendadas según la etapa de alimentación del bebé.</li>
+          <li>Guardar y recuperar el recetario personal del usuario.</li>
+          <li>Mejorar la experiencia y funcionalidad de la aplicación.</li>
+        </ul>
+      </div>
+    </div>
 
-    <h2>3. Contenido generado por los usuarios</h2>
-    <p>
-      Los negocios, productos, descripciones e imágenes son responsabilidad exclusiva de los usuarios que los registran. 
-      <strong>KOWA</strong> no se hace responsable por:
-      <ul>
-        <li>La veracidad o exactitud de la información publicada.</li>
-        <li>El uso indebido de imágenes, marcas o datos por parte de terceros.</li>
-        <li>Cualquier transacción, entrega o servicio acordado entre usuarios y negocios.</li>
-      </ul>
-      La app se limita a proporcionar la plataforma tecnológica de conexión.
-    </p>
+    <div class="section bocados-section">
+      <div class="section-header">
+        <div class="section-icon icon-amarillo">📝</div>
+        <h2>3. Contenido generado por el usuario</h2>
+      </div>
+      <div class="section-body bocados-body">
+        <p>Las recetas, imágenes y datos ingresados son responsabilidad del usuario que los registra. <strong>Luxfero Desarrollo de Software</strong> no se hace responsable por:</p>
+        <ul class="pill-list bocados-list">
+          <li>La veracidad nutricional de las recetas registradas.</li>
+          <li>El uso de imágenes o contenido protegido por derechos de autor.</li>
+          <li>Decisiones de alimentación tomadas con base en el contenido de la app.</li>
+        </ul>
+        <p style="margin-top:12px;">Recomendamos consultar siempre con un profesional de la salud antes de introducir nuevos alimentos.</p>
+      </div>
+    </div>
 
-    <h2>4. Planes y Suscripciones</h2>
-    <p>
-      KOWA ofrece diferentes planes de suscripción que otorgan beneficios adicionales (como mayor número de productos registrados).
-      <ul>
-        <li>Los precios y características pueden variar y para conocerlos se debe solicitar debidamente al correo kowa.soporte@gmail.com.</li>
-        <li>No ofrecemos reembolsos una vez activado el plan, salvo que la ley aplicable indique lo contrario.</li>
-        <li>El incumplimiento de las condiciones de uso podrá derivar en la suspensión o cancelación del servicio.</li>
-      </ul>
-    </p>
+    <div class="section bocados-section">
+      <div class="section-header">
+        <div class="section-icon icon-lila">🔒</div>
+        <h2>4. Seguridad y privacidad</h2>
+      </div>
+      <div class="section-body bocados-body">
+        <p>Tus datos personales están protegidos mediante medidas de seguridad adecuadas en servidores externos. El usuario es responsable de mantener la confidencialidad de sus credenciales.</p>
+        <p>No compartimos, vendemos ni cedemos tu información personal a terceros con fines comerciales.</p>
+      </div>
+    </div>
 
-    <h2>5. Seguridad y Privacidad</h2>
-    <p>
-      Tus datos personales están protegidos mediante medidas de seguridad adecuadas. 
-      Sin embargo, el usuario es responsable de mantener la confidencialidad de sus credenciales de acceso.
-    </p>
+    <div class="section bocados-section">
+      <div class="section-header">
+        <div class="section-icon icon-azul">⚠️</div>
+        <h2>5. Limitación de responsabilidad</h2>
+      </div>
+      <div class="section-body bocados-body">
+        <p><strong>Luxfero Desarrollo de Software</strong> no garantiza la disponibilidad constante del servicio ni se hace responsable de:</p>
+        <ul class="pill-list bocados-list">
+          <li>Problemas técnicos externos como fallas de internet o del dispositivo.</li>
+          <li>Daños derivados del uso inadecuado de la aplicación.</li>
+          <li>Reacciones alérgicas u otras consecuencias derivadas del uso de recetas publicadas.</li>
+        </ul>
+      </div>
+    </div>
 
-    <h2>6. Limitación de Responsabilidad</h2>
-    <p>
-      <strong>KOWA</strong> no garantiza la disponibilidad constante de los servicios ni se hace responsable de:
-      <ul>
-        <li>Problemas técnicos externos (internet, dispositivos, terceros).</li>
-        <li>Daños directos o indirectos derivados del uso de la app.</li>
-        <li>Contenido ofensivo, ilegal o inexacto publicado por terceros.</li>
-      </ul>
-    </p>
+    <div class="section bocados-section">
+      <div class="section-header">
+        <div class="section-icon icon-rosa">🔄</div>
+        <h2>6. Cambios en esta política</h2>
+      </div>
+      <div class="section-body bocados-body">
+        <p>Luxfero Desarrollo de Software podrá actualizar esta política en cualquier momento. Las modificaciones se publicarán en esta página con la fecha de vigencia actualizada.</p>
+      </div>
+    </div>
 
-    <h2>7. Cambios en esta Política</h2>
-    <p>
-      Podremos actualizar esta política en cualquier momento. Las modificaciones se publicarán dentro de la app con fecha de vigencia.
-    </p>
-
-    <h2>8. Contacto</h2>
-    <p>
-      Para dudas o comentarios sobre privacidad o condiciones de uso, puedes escribirnos a:
-      <br /><br />
-      📩 <a href="mailto:kowa.soporte@gmail.com">kowa.soporte@gmail.com</a>
-    </p>
+    <div class="contact-card bocados-contact">
+      <h2>¿Tienes dudas o comentarios?</h2>
+      <p>Estamos aquí para ayudarte. Escríbenos y con gusto te atendemos.</p>
+      <a href="mailto:luxfero.dev@gmail.com" class="contact-btn bocados-btn">📩 Contactar soporte</a>
+    </div>
   </main>
 
-  <footer>
-    &copy; 2025 KOWA. Todos los derechos reservados.
+  <footer class="policy-footer bocados-footer">
+    &copy; 2026 Luxfero Desarrollo de Software · Todos los derechos reservados
   </footer>
+
+</div>
+
+<!-- ═══════════════════ KOWA ═══════════════════ -->
+<div id="kowa" class="view">
+
+  <nav class="policy-nav kowa-nav">
+    <button class="nav-back" onclick="showView('home')">← Volver</button>
+    <span class="nav-title">KOWA · Política de Privacidad</span>
+  </nav>
+
+  <div class="kowa-bg">
+
+    <header class="header-kowa">
+      <div class="app-badge-kowa">KOWA · CopalilloConecta</div>
+      <h1>Política de Privacidad y Condiciones de Uso</h1>
+      <p class="dev-credit">Luxfero Desarrollo de Software</p>
+    </header>
+
+    <main class="policy-main">
+      <div class="date-tag kowa-date">📅 Última actualización: 04 de septiembre de 2025</div>
+
+      <div class="intro-card kowa-intro">
+        <p><strong>Luxfero Desarrollo de Software</strong>, desarrollador de <strong>KOWA</strong>, valora la privacidad de los usuarios y fomenta un uso responsable de la plataforma. Esta app tiene como propósito conectar negocios locales, comunidades y usuarios, facilitando el registro de productos, servicios y pedidos.</p>
+      </div>
+
+      <div class="section kowa-section">
+        <div class="section-header">
+          <div class="section-icon icon-kowa">📋</div>
+          <h2>1. Información que recopilamos</h2>
+        </div>
+        <div class="section-body kowa-body">
+          <p>Para ofrecer todas las funciones de la app, solicitamos:</p>
+          <ul class="pill-list kowa-list">
+            <li>Correo electrónico y contraseña (para autenticación).</li>
+            <li>Datos de tu negocio (nombre, descripción, teléfonos, imágenes, ubicación, categoría).</li>
+            <li>Datos opcionales del perfil de usuario.</li>
+          </ul>
+          <p style="margin-top:12px;">Estos datos son almacenados de forma segura en servidores externos.</p>
+        </div>
+      </div>
+
+      <div class="section kowa-section">
+        <div class="section-header">
+          <div class="section-icon icon-kowa">⚙️</div>
+          <h2>2. Uso de la información</h2>
+        </div>
+        <div class="section-body kowa-body">
+          <p>La información se utiliza para:</p>
+          <ul class="pill-list kowa-list">
+            <li>Permitir la creación y administración de negocios.</li>
+            <li>Mostrar productos y servicios en la app.</li>
+            <li>Gestionar suscripciones, planes y beneficios.</li>
+            <li>Facilitar la interacción entre usuarios y negocios.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section kowa-section">
+        <div class="section-header">
+          <div class="section-icon icon-kowa">📝</div>
+          <h2>3. Contenido generado por los usuarios</h2>
+        </div>
+        <div class="section-body kowa-body">
+          <p>Los negocios, productos, descripciones e imágenes son responsabilidad exclusiva de los usuarios que los registran. <strong>Luxfero Desarrollo de Software</strong> no se hace responsable por:</p>
+          <ul class="pill-list kowa-list">
+            <li>La veracidad o exactitud de la información publicada.</li>
+            <li>El uso indebido de imágenes, marcas o datos por parte de terceros.</li>
+            <li>Cualquier transacción, entrega o servicio acordado entre usuarios y negocios.</li>
+          </ul>
+          <p style="margin-top:12px;">La app se limita a proporcionar la plataforma tecnológica de conexión.</p>
+        </div>
+      </div>
+
+      <div class="section kowa-section">
+        <div class="section-header">
+          <div class="section-icon icon-kowa">💳</div>
+          <h2>4. Planes y suscripciones</h2>
+        </div>
+        <div class="section-body kowa-body">
+          <p>KOWA ofrece diferentes planes de suscripción con beneficios adicionales:</p>
+          <ul class="pill-list kowa-list">
+            <li>Los precios y características pueden variar. Solicítalos escribiendo a <strong style="color:#f2a365;">kowa.soporte@gmail.com</strong>.</li>
+            <li>No ofrecemos reembolsos una vez activado el plan, salvo que la ley aplicable indique lo contrario.</li>
+            <li>El incumplimiento de las condiciones podrá derivar en suspensión o cancelación del servicio.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section kowa-section">
+        <div class="section-header">
+          <div class="section-icon icon-kowa">🔒</div>
+          <h2>5. Seguridad y privacidad</h2>
+        </div>
+        <div class="section-body kowa-body">
+          <p>Tus datos personales están protegidos mediante medidas de seguridad adecuadas. El usuario es responsable de mantener la confidencialidad de sus credenciales de acceso.</p>
+        </div>
+      </div>
+
+      <div class="section kowa-section">
+        <div class="section-header">
+          <div class="section-icon icon-kowa">⚠️</div>
+          <h2>6. Limitación de responsabilidad</h2>
+        </div>
+        <div class="section-body kowa-body">
+          <p><strong>Luxfero Desarrollo de Software</strong> no garantiza la disponibilidad constante de los servicios ni se hace responsable de:</p>
+          <ul class="pill-list kowa-list">
+            <li>Problemas técnicos externos (internet, dispositivos, terceros).</li>
+            <li>Daños directos o indirectos derivados del uso de la app.</li>
+            <li>Contenido ofensivo, ilegal o inexacto publicado por terceros.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section kowa-section">
+        <div class="section-header">
+          <div class="section-icon icon-kowa">🔄</div>
+          <h2>7. Cambios en esta política</h2>
+        </div>
+        <div class="section-body kowa-body">
+          <p>Luxfero Desarrollo de Software podrá actualizar esta política en cualquier momento. Las modificaciones se publicarán dentro de la app con la fecha de vigencia.</p>
+        </div>
+      </div>
+
+      <div class="contact-card kowa-contact">
+        <h2>¿Dudas o comentarios?</h2>
+        <p>Para dudas sobre privacidad o condiciones de uso, contáctanos.</p>
+        <a href="mailto:kowa.soporte@gmail.com" class="contact-btn kowa-btn">📩 kowa.soporte@gmail.com</a>
+      </div>
+    </main>
+
+    <footer class="policy-footer kowa-footer">
+      &copy; 2025 Luxfero Desarrollo de Software · Todos los derechos reservados
+    </footer>
+
+  </div>
+</div>
+
+<script>
+  function showView(id) {
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
 
 </body>
 </html>
